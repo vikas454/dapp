@@ -7,25 +7,25 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Daynerds";
+const namePrefix = "Impulse Intelligence";
 const description = "Daynerds is a commutiny building project there will be an Airdrop and giveaways on our discord so stay tuned";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [{
     growEditionSizeTo: 15,
     layersOrder: [
-        { name: "Background" },
-        { name: "Clothes" },
-        { name: "Glasses" },
-        { name: "Hat and Hair" },
-        { name: "Left" },
-        { name: "Left Bubble" },
-        { name: "Mouth" },
-        { name: "Pants" },
-        { name: "Right" },
-        { name: "Right Bubble" },
-        { name: "Shoes" },
-        { name: "Skin" },
+        { name: "clux" },
+        // { name: "Clothes" },
+        // { name: "Glasses" },
+        // { name: "Hat and Hair" },
+        // { name: "Left" },
+        // { name: "Left Bubble" },
+        // { name: "Mouth" },
+        // { name: "Pants" },
+        // { name: "Right" },
+        // { name: "Right Bubble" },
+        // { name: "Shoes" },
+        // { name: "Skin" },
     ],
 }, ];
 
@@ -34,13 +34,13 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-    width: 1024,
-    height: 1024,
+    width: 960,
+    height: 1568,
     smoothing: false,
 };
 
 const extraMetadata = {
-    external_url: "https://www.daynerds.wtf/", // Replace with your website or remove this line if you do not have one.
+    external_url: "https://www.impulseintelligence.xyz/", // Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
@@ -56,8 +56,8 @@ const CONTRACT_SYMBOL = 'DNS';
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x99ed1e287Dc770203775F8E02817dD55B9f37C8A';
 const TREASURY_ADDRESS = '0x99ed1e287Dc770203775F8E02817dD55B9f37C8A';
-const MAX_SUPPLY = 150; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = 2; // Minting price per NFT. Goerli = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const MAX_SUPPLY = 300; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const MINT_PRICE = 0.06; // Minting price per NFT. Goerli = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.

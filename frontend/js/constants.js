@@ -3,7 +3,7 @@ const chain = 'goerli'; // goerli, polygon, or ethereum
 
 const welcome_h1 = "coming soon!!";
 const welcome_h2 = "Connect to MetaMask to Get Started";
-const welcome_p = 'The Daynerds coming soon ';
+const welcome_p = "IMPULSE INTELLIGENCE WILL LIVE SOON.";
 const h1_presale_coming_soon = "NFT Drop Coming Soon!!";
 const h1_presale_mint = "Public mint will start soon";
 const h1_public_mint = "Public Minting Open!!";
@@ -20,4 +20,4 @@ const button_presale_mint_whitelisted = "Mint Your Special NFT";
 const button_presale_mint_not_whitelisted = "Get on the Whitelist";
 const button_presale_already_minted = "Join The Community";
 const button_public_mint = "Mint Your NFT";
-const mint_failed = "Minting failed. 😢 Please try again.";
+const mint_failed = "Minting failed. Please try again.";
