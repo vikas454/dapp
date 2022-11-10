@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DAYNERDS</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/x-icon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/x-icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/x-icon/favicon-16x16.png" />
+    <link rel="manifest" href="images/x-icon/site.webmanifest" />
+    <link rel="stylesheet" href="css/three-dots.min.css" />
+    <link rel="stylesheet" href="css/splide.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="header_inner">
+                    <div class="header_top">
+                        <ul class="header-social">
+                            <li>
+                                <a href="https://discord.com/invite/RJXAtCVmyy" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/header/discord.webp" alt="Discord" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/Daynerds" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/header/twitter.webp" alt="Twitter" />
+                                </a>
+                            </li>
+                            <li>
+                                <!-- https://testnets.opensea.io/collection/daynerds-wtf -->
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <img src="images/header/opensea.webp" alt="Opensea" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-bottom">
+                        <div class="logo">
+                            <a href="https://www.daynerds.wtf/">
+                                <!-- <img src="images/nerds-removebg-preview.png" alt="logo" width="150" height="90" /> -->
+                            </a>
+                        </div>
+                        <div class="menu">
+                            <div class="hamburgermenu btn" onclick="animate_menu(this)">
+                                <p>Menu</p>
+                                <div class="bars">
+                                    <div class="line line1"></div>
+                                    <div class="line line2"></div>
+                                    <div class="line line3"></div>
+                                </div>
+                            </div>
+                            <ul class="menu_inner">
+                                <li><a href="https://www.daynerds.wtf/">Home</a></li>
+                                <li><a href="https://www.daynerds.wtf/">About</a></li>
+                                <!-- <li><a href="#road_map">Roadmap</a></li> -->
+                                <li><a href="https://www.daynerds.wtf/">Team</a></li>
+                            </ul>
+
+                            <button class="wallet-btn btn" id="connectWallet">
+                                <span>Connect Wallet</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="welcome-banner">
+            <section class="container not-connected">
+                <div>
+                    <h2 id="welcomeH2">Connect to MetaMask to Get Started</h2>
+                    <h1 id="welcomeH1">COMINGSOON!</h1>
+                    <p id="welcomeP">
+                        Daynerds WE WILL LIVE SOON.
+                    </p>
+                </div>
+            </section>
+        </div>
+        <div class="countdown_section">
+            <section class="container">
+                <div class="countdown card">
+                    <div id="countdown">
+                        <ul class="count-down" data-date="">
+                            <li class="clock-item">
+                                <span class="count-number days">20</span>
+                                <p class="count-text">Days</p>
+                            </li>
+
+                            <li class="clock-item">
+                                <span class="count-number hours">20</span>
+                                <p class="count-text">Hour</p>
+                            </li>
+
+                            <li class="clock-item">
+                                <span class="count-number minutes">20</span>
+                                <p class="count-text">Min</p>
+                            </li>
+
+                            <li class="clock-item">
+                                <span class="count-number seconds">20</span>
+                                <p class="count-text">Sec</p>
+                            </li>
+                        </ul>
+                        <h2 id="subHeading">PUBLIC SALE COUNT DOWN</h2>
+                    </div>
+                    <h1 id="mainHeading">NFT Drop Coming Soon!!</h1>
+                    <p id="mainText">
+                        DAYNERDS IS A COMMUNITY PROJECT AFTER SALE WE WILL GIVEAWAY HUGE AMOUNT OF MATIC IN COMMUNITY
+                    </p>
+                    <a id="actionButton" href="https://discord.com/invite/RJXAtCVmyy" target="_blank" rel="noopener noreferrer" class="hero-btn btn"><span>Join the Catmmunity</span>
+                    </a>
+                    <div id="mintContainer" class="mint-container hidden">
+                        <div class="info-container">
+                            <div>
+                                <h3>Supply</h3>
+                                <p id="totalSupply">1500</p>
+                            </div>
+                            <div>
+                                <h3>Price Per Mint</h3>
+                                <p id="pricePerMint">2 MATIC</p>
+                            </div>
+                            <div>
+                                <h3>Max</h3>
+                                <p id="maxPerMint">10 per wallet</p>
+                            </div>
+                        </div>
+                        <div class="mint-qty">
+                            <span>
+                                <button class="input-number-decrement btn" id="mintDecrement">–</button>
+                                <input id="mintInput" class="input-number btn" type="number" value="1" min="1" max="5" />
+                                <button class="input-number-increment btn" id="mintIncrement">+</button>
+                            </span>
+                            <button id="setQtyMax" class="btn">SET MAX</button>
+                        </div>
+                        <div class="total-price-container">
+                            <h3>Total</h3>
+                            <p id="totalPrice">2 MATIC</p>
+                        </div>
+                        <button id="mintButton" class="hero-btn btn mint-btn">Mint</button>
+                    </div>
+                </div>
+                <div class="minted-container card show-card hidden">
+                    <h1>🎉</h1>
+                    <h2>Minted!</h2>
+                    <p>Here's your trasaction link:</p>
+                    <a id="mintedTxnBtn" href="" target="_blank" rel="noopener noreferrer">
+                        <button class="hero-btn btn">View Transaction</button>
+                    </a>
+                    <p>View it in the collection:</p>
+                    <a id="mintedLinkBtn" href="https://testnets.opensea.io/collection/daynerds-wtf" target="_blank" rel="noopener noreferrer">
+                        <button class="hero-btn btn">View Collection</button>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div id="spinner" class="dot-spin"></div>
+
+        <div class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="images/slider/0.png" />
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/slider/1.png" />
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/slider/2.png" />
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/slider/3.png" />
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/slider/4.png" />
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/slider/5.png" />
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/slider/6.png" />
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/slider/7.png" />
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/slider/8.png" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="accordion_section accoridon">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2>have a <b>Questions ?</b></h2>
+                        <div class="tabs">
+                            <div class="tab">
+                                <input type="checkbox" id="chck1">
+                                <label class="tab-label" for="chck1">why polygon chain ?</label>
+                                <div class="tab-content">
+                                    Minting on Polygon is very similar to Ethereum or another blockchain, but with cheaper gas fees, and shorter transaction times. Polygon makes minting a new NFT smoother, and less costly. To make it even more convenient, Metamask, the most used crypto
+                                    wallet, supports the Polygon network and can be used to mint NFTs.
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <input type="checkbox" id="chck2">
+                                <label class="tab-label" for="chck2">WHERE CAN I MINT THE  DAYNERDS NFTS ?</label>
+                                <div class="tab-content">
+                                    You will be able to mint from the website cross check our website before minting https://www.daynerds.wtf .
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <input type="checkbox" id="chck3">
+                                <label class="tab-label" for="chck3">HOW MANY DAYNERDS NFT  WILL THERE BE?</label>
+                                <div class="tab-content">
+                                    there will be total 1500 daynerds nft will be there all nft will be available for the public mint .
+                                </div>
+                            </div>
+                            <div class="tab">
+                                <input type="checkbox" id="chck4">
+                                <label class="tab-label" for="chck4">HOW DO I MINT?</label>
+                                <div class="tab-content">
+                                    Download and install a Chrome browser plugin called MetaMask. This will allow websites (that you authorize) access to your Ethereum account. If you made a new account, buy some Ethereum. The MetaMask plugin has a button that will allow you to buy Ether
+                                    from Coinbase. Once you have the plugin installed, this website will recognize it and add button that allows you to mint the DAYNERDS NFT Collection.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="road_map" class="page_roadmap_section">
+            <div class="container">
+                <div class="page_roadmap_inner">
+                    <h2>Roadmap</h2>
+                    <div class="page_roadmap_list">
+                        <div class="page_roadmap_item">
+                            <div class="page_roadmap_box">
+                                <div class="page_roadmap_heading">
+                                    <span>Chapter 1</span>
+                                </div>
+                                <div class="page_roadmap_title">
+                                    <h3></h3>
+                                </div>
+                                <div class="page_roadmap_details">
+                                    <ol>
+                                        <li>
+                                            <p>WEBSITE DEVLOPMENT</p>
+                                        </li>
+                                        <li>
+                                            <p>CROWD FUNDING</p>
+                                        </li>
+                                        <li>
+                                            <p>NFT LAUNCHPAD</p>
+                                        </li>
+
+                                        <li>
+                                            <p>PAID CRYPTO BOOKS FOR DAYNERDS NFT HOLDERS.</p>
+                                        </li>
+                                        <li>
+                                            <p>AIRDROP AND GIVEAWAYS FOR DAYNERDS NFT HOLDERS.</p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page_roadmap_item">
+                            <div class="page_roadmap_box">
+                                <div class="page_roadmap_heading">
+                                    <span>Chapter 2</span>
+                                </div>
+                                <div class="page_roadmap_title">
+                                    <h3></h3>
+                                </div>
+                                <div class="page_roadmap_details">
+                                    <ol>
+                                        <li>
+                                            <p>WL FOR DAYNERDS NFT HOLDERS</p>
+                                        </li>
+                                        <li>
+                                            <p>METAVERSE PROJECTS COLLOBRATION</p>
+                                        </li>
+                                        <li>
+                                            <p>CRYPTO WEBSITE LINKS TO AVOID PHISHING and scams.</p>
+                                        </li>
+                                        <li>
+                                            <p>NEW ROJECT LISTINGS AND PRIORITY IN WL FOR DAYNERDS HOLDERS.</p>
+                                        </li>
+
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page_roadmap_item">
+                            <div class="page_roadmap_box">
+                                <div class="page_roadmap_heading">
+                                    <span>Chapter 3</span>
+                                </div>
+                                <div class="page_roadmap_title">
+                                    <h3></h3>
+                                </div>
+                                <div class="page_roadmap_details">
+                                    <ol>
+
+                                        <li>
+                                            <p>NFT HYPE INDICATOR WEATHER TO BUY (NFTS) OR NOT </p>
+                                        </li>
+                                        <li>
+                                            <p>NFT ANALISYS TOOLS</p>
+                                        </li>
+
+                                        <li>
+                                            <p>DAYNERDS (DNS WALLET)</p>
+                                        </li>
+                                        <li>
+                                            <p>MERCHENDISE</p>
+                                        </li>
+                                        <li>
+                                            <p>NFT calls (mints and aftermarket)</p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="page_roadmap_item">
+                            <div class="page_roadmap_box">
+                                <div class="page_roadmap_heading">
+                                    <span>Chapter 4</span>
+                                </div>
+                                <div class="page_roadmap_title">
+                                    <h3></h3>
+                                </div>
+                                <div class="page_roadmap_details">
+                                    <ol>
+                                        <li>
+                                            <p>NFT calendar</p>
+                                        </li>
+                                        <li>
+                                            <p>Free slots on NFT bots (ICP ETH and SOL minting )</p>
+                                        </li>
+                                        <li>
+                                            <p>Whale monitor</p>
+                                        </li>
+                                        <li>
+                                            <p>Top buys/sells/lists monitors</p>
+                                        </li>
+                                        <li>
+                                            <p>Popular mints monitor</p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="home_roadmap_section">
+            <div class="container">
+                <div class="home_roadmap_inner">
+                    <div class="home_rm_col">
+
+                    </div>
+                    <div class="home_rm_col">
+                        <div class="home_rm_col_inner">
+                            <div class="hm_rd_title">
+                                <h2>Roadmap</h2>
+                            </div>
+                            <div class="hm_rd_details">
+                                <p></p>
+                            </div>
+                            <div class="hm_rd_btn">
+                                <a href="#" class="btn">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <footer id="footer">
+            <div class="footer-inner">
+                <div class="container">
+                    <div class="footinner-cols">
+                        <div class="footcol1">
+                            <div class="footlogo">
+                                <a href="index.html"><img src="images/foot-logo.png" alt="Footer Logo" width="244" height="49"></a>
+                            </div>
+                        </div>
+                        <div class="footcol2 nft-calender-section">
+                            <h4>As Seen On : </h4>
+                            <div class="nft-calender-inner">
+                                <div class="nft-calender-col">
+                                    <a href="https://nftcalendar.io/"><img src="./images/nft-calender-logo.jpeg" alt="nft-calender-logo" width="1200" height="1200"></a>
+                                </div>
+                                <div class="nft-calender-col">
+                                    <a href="https://nftevening.com/event/daynerds-nft/"><img src="./images/nft-evening-logo.jpeg" alt="nft-evening-logo" width="1280" height="570"></a>
+                                </div>
+                                <div class="nft-calender-col">
+                                    <a href="https://www.nftmintradar.com/nft-drops/daynerds"><img src="./images/mint-radar.jpeg" alt="mint-radar" width="800" height="277"></a>
+                                </div>
+                                <div class="nft-calender-col">
+                                    <a href="https://nftwatcher.net/events/DAYNERDS"><img src="./images/nft-watcher.jpeg" alt="nft-watcher" width="400" height="400"></a>
+                                </div>
+                                <div class="nft-calender-col">
+                                    <a href="https://nftartpedia.com/collections/daynerds"><img src="./images/nft-artpedia.jpeg" alt="nft-artpedia" width="1080" height="360"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-section">
+                <div class="container">
+                    <div class="copyright-inner">
+                        <div class="copyrightcol">
+                            <p>© Copyright : 2022-2023 <span class="foot-link"> <a href="index.html">DAYNERDS</a></span>. All Rights Reserved</p>
+                        </div>
+                    </div>
+                    <a id="button" class="show"></a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="js/metamask-onboarding.bundle.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/splide.min.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/abi.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
