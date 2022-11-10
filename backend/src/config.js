@@ -12,9 +12,9 @@ const description = "Join the Æ8XO-11 Army and become part of this Expedition."
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [{
-    growEditionSizeTo: 300,
+    growEditionSizeTo: 9,
     layersOrder: [
-        { name: "clux" },
+        { name: "image" },
         // { name: "Clothes" },
         // { name: "Glasses" },
         // { name: "Hat and Hair" },
@@ -47,25 +47,25 @@ const extraMetadata = {
 
 // ** REQUIRED **
 const AUTH = process.env.NFTPORT_API_KEY; // Set this in the .env file to prevent exposing your API key when pushing to Github
-const LIMIT = 10; // Your API key rate limit
-const CHAIN = 'ethereum'; // only goerli, polygon, or ethereum
+const LIMIT = 2; // Your API key rate limit
+const CHAIN = 'goerli'; // only goerli, polygon, or ethereum
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
 const CONTRACT_NAME = 'impulseclux';
 const CONTRACT_SYMBOL = 'DNS';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
-const OWNER_ADDRESS = '0x7FDE4F0D0ADA637331263067AE4AD67A93653f44';
-const TREASURY_ADDRESS = '0x7FDE4F0D0ADA637331263067AE4AD67A93653f44';
-const MAX_SUPPLY = 300; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const OWNER_ADDRESS = '0x99ed1e287Dc770203775F8E02817dD55B9f37C8A';
+const TREASURY_ADDRESS = '0x99ed1e287Dc770203775F8E02817dD55B9f37C8A';
+const MAX_SUPPLY = 20; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
 const MINT_PRICE = 0.06; // Minting price per NFT. Goerli = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-11-12T14:00:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-11-11T12:00:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PRESALE_MINT_START_DATE = "2022-11-11T14:00:48+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
+const PRESALE_MINT_START_DATE = "2022-11-10T17:50:48+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
-const ROYALTY_ADDRESS = "0x7FDE4F0D0ADA637331263067AE4AD67A93653f44"; // Address that will receive the royalty
+const ROYALTY_ADDRESS = "0x99ed1e287Dc770203775F8E02817dD55B9f37C8A"; // Address that will receive the royalty
 const BASE_URI = null; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
 const PRESALE_WHITELISTED_ADDRESSES = ["0x99ed1e287Dc770203775F8E02817dD55B9f37C8A","0x7FDE4F0D0ADA637331263067AE4AD67A93653f44"]; // only update if you want to manually set the whitelisted addresses
