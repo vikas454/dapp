@@ -7,40 +7,40 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Daynerds";
-const description = "Daynerds is a commutiny building project there will be an Airdrop and giveaways on our discord so stay tuned";
+const namePrefix = "Impulse Intelligence";
+const description = "Join the Æ8XO-11 Army and become part of this Expedition.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [{
-    growEditionSizeTo: 1500,
+    growEditionSizeTo: 9,
     layersOrder: [
-        { name: "Background" },
-        { name: "Clothes" },
-        { name: "Glasses" },
-        { name: "Hat and Hair" },
-        { name: "Left" },
-        { name: "Left Bubble" },
-        { name: "Mouth" },
-        { name: "Pants" },
-        { name: "Right" },
-        { name: "Right Bubble" },
-        { name: "Shoes" },
-        { name: "Skin" },
+        { name: "image" },
+        // { name: "Clothes" },
+        // { name: "Glasses" },
+        // { name: "Hat and Hair" },
+        // { name: "Left" },
+        // { name: "Left Bubble" },
+        // { name: "Mouth" },
+        // { name: "Pants" },
+        // { name: "Right" },
+        // { name: "Right Bubble" },
+        // { name: "Shoes" },
+        // { name: "Skin" },
     ],
 }, ];
 
-const shuffleLayerConfigurations = true;
+const shuffleLayerConfigurations = false;
 
 const debugLogs = false;
 
 const format = {
-    width: 1024,
-    height: 1024,
+    width: 512,
+    height: 512,
     smoothing: false,
 };
 
 const extraMetadata = {
-    external_url: "https://www.daynerds.wtf/", // Replace with your website or remove this line if you do not have one.
+    external_url: "https://www.impulseintelligence.xyz/", // Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
@@ -48,35 +48,35 @@ const extraMetadata = {
 // ** REQUIRED **
 const AUTH = process.env.NFTPORT_API_KEY; // Set this in the .env file to prevent exposing your API key when pushing to Github
 const LIMIT = 2; // Your API key rate limit
-const CHAIN = 'polygon'; // only goerli, polygon, or ethereum
+const CHAIN = 'goerli'; // only goerli, polygon, or ethereum
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'Daynerds.wtf';
+const CONTRACT_NAME = 'Impulse Intelligence';
 const CONTRACT_SYMBOL = 'DNS';
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
-const OWNER_ADDRESS = '0x7aF1b94a5697EBB0e64fB31c296f7273128a62Fd';
-const TREASURY_ADDRESS = '0x7aF1b94a5697EBB0e64fB31c296f7273128a62Fd';
-const MAX_SUPPLY = 1500; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = 2; // Minting price per NFT. Goerli = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const OWNER_ADDRESS = '0x99ed1e287Dc770203775F8E02817dD55B9f37C8A';
+const TREASURY_ADDRESS = '0x99ed1e287Dc770203775F8E02817dD55B9f37C8A';
+const MAX_SUPPLY = 300; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const MINT_PRICE = 0.06; // Minting price per NFT. Goerli = ETH, Ethereum = ETH, Polygon = MATIC. CANNOT BE UPDATED!
 const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-11-11T07:50:00+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-11-11T08:00:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
+const PRESALE_MINT_START_DATE = "2022-11-11T04:05:48+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
-const ROYALTY_ADDRESS = "0x7aF1b94a5697EBB0e64fB31c296f7273128a62Fd"; // Address that will receive the royalty
+const ROYALTY_ADDRESS = "0x99ed1e287Dc770203775F8E02817dD55B9f37C8A"; // Address that will receive the royalty
 const BASE_URI = null; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
-const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually set the whitelisted addresses
+const PRESALE_WHITELISTED_ADDRESSES = ["0x99ed1e287Dc770203775F8E02817dD55B9f37C8A","0xBe0524087fc4002E0FFb7541c180Ba73df5DEb24"]; // only update if you want to manually set the whitelisted addresses
 
 // ** OPTIONAL **
 let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
 
 // Generic Metadata is optional if you want to reveal your NFTs
-const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
-const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "REPLACE THIS"; // Replace with what you want the generic descriptions to say.
+const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
+const GENERIC_TITLE = "Impulse Intelligence"; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
+const GENERIC_DESCRIPTION = "Join the Æ8XO-11 Army and become part of this Expedition."; // Replace with what you want the generic descriptions to say.
 const GENERIC_IMAGE = "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
@@ -98,7 +98,7 @@ const solanaMetadata = {
     seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
     external_url: "https://www.youtube.com/c/hashlipsnft",
     creators: [{
-        address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+        address: "0x99ed1e287Dc770203775F8E02817dD55B9f37C8A",
         share: 100,
     }, ],
 };
