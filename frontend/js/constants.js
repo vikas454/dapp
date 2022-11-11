@@ -1,4 +1,4 @@
-const contractAddress = "0x896B7D31cDa46eD833179414c513F22329C1C709"; // Replace with your own contract address
+const contractAddress = "0xcEEe1CeDa57D019f991147D09FC70ea4fBEF4898"; // Replace with your own contract address
 const chain = 'goerli'; // goerli, polygon, or ethereum
 
 const welcome_h1 = "Welcome to the Impulse Intelligence";

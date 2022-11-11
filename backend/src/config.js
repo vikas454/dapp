@@ -7,14 +7,14 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Impulse Intelligence";
+const namePrefix = "Impulse";
 const description = "Join the Æ8XO-11 Army and become part of this Expedition.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 const layerConfigurations = [{
-    growEditionSizeTo: 9,
+    growEditionSizeTo: 10,
     layersOrder: [
-        { name: "image" },
+        { name: "cops" },
         // { name: "Clothes" },
         // { name: "Glasses" },
         // { name: "Hat and Hair" },
@@ -27,6 +27,14 @@ const layerConfigurations = [{
         // { name: "Shoes" },
         // { name: "Skin" },
     ],
+    // growEditionSizeTo: 5,
+    // layersOrder: [
+    //     { name: "cops" },
+    // ],
+    // growEditionSizeTo: 10,
+    // layersOrder: [
+    //     { name: "army" },
+    // ],
 }, ];
 
 const shuffleLayerConfigurations = false;
@@ -34,8 +42,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-    width: 512,
-    height: 512,
+    width: 960,
+    height: 1568,
     smoothing: false,
 };
 
@@ -51,7 +59,7 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'goerli'; // only goerli, polygon, or ethereum
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'Impulse Intelligence';
+const CONTRACT_NAME = 'Impulse';
 const CONTRACT_SYMBOL = 'DNS';
 const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
 const OWNER_ADDRESS = '0x99ed1e287Dc770203775F8E02817dD55B9f37C8A';
@@ -61,9 +69,9 @@ const MINT_PRICE = 0.06; // Minting price per NFT. Goerli = ETH, Ethereum = ETH,
 const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-11-11T07:50:00+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-11-11T10:00:00+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PRESALE_MINT_START_DATE = "2022-11-11T07:30:00+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
+const PRESALE_MINT_START_DATE = "2022-11-11T09:35:00+00:00"; // Optional. Eg: 2022-02-08T11:30:48+00:00
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = "0x99ed1e287Dc770203775F8E02817dD55B9f37C8A"; // Address that will receive the royalty
 const BASE_URI = null; // only update if you want to manually set the base uri
@@ -75,7 +83,7 @@ let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually inclu
 
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
-const GENERIC_TITLE = "Impulse Intelligence"; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
+const GENERIC_TITLE = "Impulse"; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
 const GENERIC_DESCRIPTION = "Join the Æ8XO-11 Army and become part of this Expedition."; // Replace with what you want the generic descriptions to say.
 const GENERIC_IMAGE = "#"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
